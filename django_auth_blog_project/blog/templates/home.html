@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="text-center">
+    <h1 class="mb-4">Welcome to My Blog ✍️</h1>
+
+    {% if user.is_authenticated %}
+        <p class="lead">You are logged in as <strong>{{ user.username }}</strong></p>
+    {% else %}
+        <p class="lead">Please login or register to start posting</p>
+    {% endif %}
+</div>
+
+{% endblock %}
